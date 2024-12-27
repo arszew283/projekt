@@ -24,8 +24,20 @@ int main() {
         cout << endl;
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
+	cout << "2. isPrime" << endl;
         cout << "0. Wyjscie" << endl;
         cin >> wyjscie;
+	if(wyjscie==2)
+	{
+		int liczba;
+		cout<<"Podaj liczbe aby sprawdzic czy jest pierwsza: ";
+		cin>>liczba;
+		if(isPrime(liczba))
+			cout<<"\nLiczba jest pierwsza"<<endl;
+		else if(!isPrime(liczba))
+			cout<<"\nLiczba nie jest pierwsza"<<endl;
+		return 0;
+	}
     } while(wyjscie != 0);
     return 0;
 }
